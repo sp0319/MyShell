@@ -31,6 +31,7 @@ int main(void)
     while (true) {
         char *s;
         int len;
+	char EXIT[MAX_LEN_LINE] = {'e','x','i','t'};
         char *prognum[5] = {NULL, };
         int prognum_count=0;
         //uid_t user_id;
@@ -70,7 +71,7 @@ int main(void)
             fprintf(stderr, "fgets failed\n");
             exit(1);
         }
-        else if(!strcmp(s, "exit")){
+        else if(!strcmp(s, EXIT)){
             printf(ANSI_COLOR_YELLOW "***** Good bye *****\n" ANSI_COLOR_RESET);
             break;
         }
